@@ -30,7 +30,6 @@ namespace bhgcc
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            logger.LogInformation("App Start.");
             var appsettings = configuration.Get<Appsettings>();
             var workers = appsettings.Worker;
             foreach (var setting in workers)
